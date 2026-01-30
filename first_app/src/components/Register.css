@@ -1,0 +1,41 @@
+/*//*/
+.register-bg {
+  min-height: 100vh;
+  background: url("") center/cover no-repeat;
+  background: linear-gradient(to right, #e3f2fd, #5f66f4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glass card */
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+  border-radius: 12px;
+  background: rgba(170, 150, 226, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Inputs */
+.custom-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  border-radius: 0;
+  color: #000000;
+}
+
+.custom-input::placeholder {
+  color: #fffafa;
+}
+
+.custom-input:focus {
+  background: transparent;
+  color: #000000;
+  box-shadow: none;
+  border-bottom-color: #3a3737;
+}
