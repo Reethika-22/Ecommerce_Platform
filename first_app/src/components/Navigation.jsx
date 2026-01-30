@@ -24,7 +24,7 @@ export default function Navigation() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
         <Link className="navbar-brand" to="/" onClick={closeNavbar}>
-          MyApp
+          Mercato
         </Link>
 
         {/* Toggle button */}

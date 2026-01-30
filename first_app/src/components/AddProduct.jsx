@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
+
 export default function AddProduct() {
     const [name,setName]=useState("")
     const [price,setPrice]=useState("")
@@ -18,7 +20,11 @@ export default function AddProduct() {
           .then((res)=>{
             console.log(res)
             if(res.status==201){
-              alert("Product added successfull")
+              Swal .fire({
+                title: "Success",
+                text: "Product added successfully.",
+                icon: "success"
+              })
               navigate("/")
             }
           })

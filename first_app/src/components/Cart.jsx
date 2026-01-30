@@ -41,10 +41,11 @@ export default function Cart() {
             <div className="col" key={item._id}>
               <div className="card p-3">
                 <h5>{item.product.name}</h5>
-                <p><b>Price:</b> ₹{item.product.price}</p>
-                <p><b>Quantity:</b> {item.quantity}</p>
-                <p><b>Total:</b> ₹{item.product.price * item.quantity}</p>
-                <p><b><button onClick={()=>deleteProduct(i._id)} className='btn btn-danger'>Remove</button></b></p>
+                <p><b>Price: </b> ₹{item.product.price}</p>
+                <p><b>Quantity: </b> {item.quantity}</p>
+                <p><b>Stock: </b>{item.product.stock}</p>
+                <p><b>Total: </b> ₹{item.product.price * item.quantity}</p>
+                <p><b><button className='btn btn-danger'>Remove</button></b></p>
               </div>
             </div>
           ))}

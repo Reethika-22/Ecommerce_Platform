@@ -18,33 +18,36 @@ h2 {
   border: none;
   border-radius: 16px;
   padding: 18px;
-  background: #ffffff;
+  background: #cb9b9b;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
   transition: all 0.25s ease-in-out;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 14px 30px rgba(170, 0, 0, 0.12);
 }
 
 /* Product name */
 .card h5 {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 2%;
+  font-family: 'Inter', sans-serif;
   color: #1f2d3d;
   margin-bottom: 12px;
 }
+
+/*name*/
+
 
 /* Labels like Price, Category */
 .card p {
   margin: 4px 0;
   font-size: 15px;
-  color: #555;
+  color: #ffdddd;
 }
 
 .card p b {
-  color: #2c3e50;
+  color: #198cff;
   font-weight: 600;
 }
 

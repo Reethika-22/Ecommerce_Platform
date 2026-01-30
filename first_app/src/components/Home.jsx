@@ -66,7 +66,7 @@ export default function Home() {
                 <div className="col" key={i._id}>
                   <div className="card h-100">
                       <div className="card-body">
-                        <h5 className="card-title"><b>Name:</b>{i.name}</h5>
+                        <h5 className="card-title"><b>Name: </b>{i.name}</h5>
                         <p className="card-text"><b>Price: </b>{i.price}</p>
                         <p className="card-text"><b>Category: </b>{i.category}</p>
                         <p className="card-text"><b>Description: </b>{i.description}</p>
