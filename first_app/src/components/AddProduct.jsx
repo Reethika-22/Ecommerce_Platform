@@ -17,7 +17,7 @@ export default function AddProduct() {
       name, price, description, category, stock: Number(stock)
     }
     console.log(role)
-    axios.post("http://localhost:4000/api/product/add", newProduct,{headers:{role:"admin"}},)
+    axios.post("https://mercato-cdym.onrender.com/api/product/add", newProduct,{headers:{role:"admin"}},)
       .then((res) => {
         console.log(res)
         if (res.status == 201) {

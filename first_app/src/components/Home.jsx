@@ -23,7 +23,7 @@ export default function Home() {
       })
       return false
     }
-    axios.post("http://localhost:4000/api/cart/add",
+    axios.post("https://mercato-cdym.onrender.com/api/cart/add",
       { productId, quantity: 1 },
       {
         params: { userId }
@@ -46,7 +46,7 @@ export default function Home() {
   }
 async function deleteProduct(id){
   try {
-    await axios.delete(`http://localhost:4000/api/product/delete/${id}`, {
+    await axios.delete(`https://mercato-cdym.onrender.com/api/product/delete/${id}`, {
       headers: { role: "admin" }   // send role in headers
     });
 
@@ -70,7 +70,7 @@ async function deleteProduct(id){
 }
 
   async function fetchProducts() {
-    axios.get("http://localhost:4000/api/product")
+    axios.get("https://mercato-cdym.onrender.com/api/product")
       .then((res) => {
         console.log(res.data)
         if (res.status == 200) {
