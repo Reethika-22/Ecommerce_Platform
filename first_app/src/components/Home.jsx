@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import "./Home.css"
 export default function Home() {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const role = localStorage.getItem("role")
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   useEffect(() => {
     fetchProducts()
   }, [])
@@ -44,6 +44,30 @@ export default function Home() {
         console.log("error from add cart logic ", err)
       })
   }
+async function deleteProduct(id){
+  try {
+    await axios.delete(`http://localhost:4000/api/product/delete/${id}`, {
+      headers: { role: "admin" }   // send role in headers
+    });
+
+    Swal.fire({
+      title: "Deleted!",
+      text: "Product has been deleted.",
+      icon: "success"
+    });
+
+    // remove product from UI without refresh
+    setProducts(prev => prev.filter(p => p._id !== id));
+
+  } catch (err) {
+    console.log("Delete error", err);
+    Swal.fire({
+      title: "Error!",
+      text: "There was an error deleting the product.",
+      icon: "error"
+    });
+  }
+}
 
   async function fetchProducts() {
     axios.get("http://localhost:4000/api/product")
